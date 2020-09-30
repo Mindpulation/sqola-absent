@@ -1,0 +1,19 @@
+{
+  "name": "sqola-absent",
+  "version": "1.0.0",
+  "description": "Sqola Absent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mindpulation/sqola-absent.git"
+  },
+  "author": "Muhammad Indrawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mindpulation/sqola-absent/issues"
+  },
+  "homepage": "https://github.com/Mindpulation/sqola-absent#readme"
+}
