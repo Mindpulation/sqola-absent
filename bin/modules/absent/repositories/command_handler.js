@@ -1,9 +1,14 @@
 const command = require('./command');
 
-const insertDataAbsent = (payloadDataSignup) => {
-    return command.insertData(payloadDataSignup);
+const insertDataAbsent = (payloadDataAbsent) => {
+    return command.insertData(payloadDataAbsent);
+}
+
+const updateDataAbsent = (payloadUpdateAbsent) => {
+    return command.updateData(payloadUpdateAbsent)
 }
 
 module.exports = {
-    insertDataAbsent
+    insertDataAbsent,
+    updateDataAbsent
 }
