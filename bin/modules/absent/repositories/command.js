@@ -64,7 +64,7 @@ const updateData = async (payloadData) => {
     try{
         const payload = {
             "idMapel" : payloadData.data.idMapel,
-            "endDate" : { $lt: payloadData.data.endDate },
+            "endDate" : { $lt: Date() },
         }
         const namaMurid = await httpClient.sendRequest('POST', config.get('studentBaseEndpoint'), config.get('studentFindEndpoint'), '', '', {"email" : payloadData.data.email});
         const dbResult = await find(con, payload);

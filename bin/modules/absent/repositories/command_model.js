@@ -11,6 +11,12 @@ const insert = joi.object({
     noPresent : joi.array().required()
 });
 
+const signup = joi.object({
+    email : joi.string().email({ tlds: { allow: true } }).required(),
+    idMapel : joi.string().required()
+})
+
 module.exports = {
-    insert
+    insert,
+    signup
 };

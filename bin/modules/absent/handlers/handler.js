@@ -51,18 +51,14 @@ const UpdatePresentStudent = async (req, res) => {
 
     const validate = validator.isValidPayload(req.body, signup);
     const postRequest = async (result) => {
-        console.log("\nIni Result : ", result)
         if (result.err) {
             return result;
         }
-        const output = await updateDataAbsent(result);
-        console.log("Ini output : ", output)
-        return output;
+        return await updateDataAbsent(result);
     };
     const sendResponse = async (result) => {
         (result.err) ? wrapper.response(res, 'fail', result, result.message, 400)
             : wrapper.response(res, 'success', result, result.message, 200);
-        console.log("\nIni Result : ", result)
 
     };
     sendResponse(await postRequest(validate));
